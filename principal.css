@@ -1,0 +1,14 @@
+
+.titulo_header{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3EM;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*buscar una tipografía mejor*/
+}
+
+header{ /*Preguntar a la profe como ajustar la imagen para que entre*/
+        background-image: url(IMG/Fondo\ HEADER\ -\ Church_Heart_of_the_Andes.jpg);
+        padding: 10px;
+        height: 500px;
+       }
+
