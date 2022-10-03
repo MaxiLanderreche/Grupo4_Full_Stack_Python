@@ -126,7 +126,7 @@
     grid-row: 1/2;
 }
 .principal_imagen {
-    background-image: url(IMG/Imagen_principal_540x741.jpg);
+    background-image: url(Imagen_principal_540x741.jpg);
     margin: 0.5rem;
     border: 1px  solid;
     grid-column: 1/7;
