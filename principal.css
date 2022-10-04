@@ -136,7 +136,8 @@
 /* FOOTER */
 
 .footer{
-   
+        align-content: center;
+        text-align: center;
         margin: 0.5rem;
         border: 2px #9f8f4d solid;
         background-color: #bacbd6;
@@ -145,6 +146,9 @@
         grid-row: 11/25;
                
 }
+
+/* FORMULARIO */
+/* .formulario {poner estilo del formulario} */
 
 
 
