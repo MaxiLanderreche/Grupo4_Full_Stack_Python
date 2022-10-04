@@ -21,70 +21,104 @@
     <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="body">
+    <!-- Header -->
+    <div class="header">
+
+        <div class="contenido_header">
+
+            <div class="logo">
+                <a href="index.html"><img src="" alt=>Falta definir logo</a>
+            </div>
+
+            <div class="H1">
+                <h1> AlveArt </h1>
+            </div>
+
+            <div class="H2">
+                <h2>Art Gallery</h2>
+            </div>
+        </div>
+    </div>
+
     <!--Boostrap formulario-->
-    <form class="formulario" action="https://formspree.io/f/mrgdklpe" method="POST">
-        <h1>Contact us</h1>
-        <div class="mb-3 form">
-            <label for="exampleFormControlInput1" class="form-label">Name</label>
-            <input type="text" class="form-control" name="name" placeholder="Name Last name">
-        </div>
-        <div class="mb-3 form">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" name="email" placeholder="name@example.com">
-        </div>
-        <div class="mb-3 form">
-            <label for="exampleFormControlInput1" class="form-label">Artwork id</label>
-            <input type="text" class="form-control" name="subject" placeholder="OO1">
-        </div>
-        <div class="mb-3 form">
-            <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
-            <textarea class="form-control" name="coments" rows="3"
-                placeholder="Please mention your interest in our artwork. "></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary mb-3">Submit</button>
-    </form>
+    <div class="principal_formulario">
+        <form class="formulario" action="https://formspree.io/f/mrgdklpe" method="POST">
+            <h1 class="H1_contacto">Contact us</h1>
+            <div class="mb-3 form">
+                <label for="exampleFormControlInput1" class="form-label">
+                    <h2 class="H2_contacto">Name</h2>
+                </label>
+                <input type="text" class="form-control" name="name" placeholder="Name Last name">
+            </div>
+            <div class="mb-3 form">
+                <label for="exampleFormControlInput1" class="form-label">
+                    <H2 class="H2_contacto">Email address</H2>
+                </label>
+                <input type="email" class="form-control" name="email" placeholder="name@example.com">
+            </div>
+            <div class="mb-3 form">
+                <label for="exampleFormControlInput1" class="form-label">
+                    <H2 class="H2_contacto">Artwork id</H2>
+                </label>
+                <input type="text" class="form-control" name="subject" placeholder="OO1">
+            </div>
+            <div class="mb-3 form">
+                <label for="exampleFormControlTextarea1" class="form-label">
+                    <H2 class="H2_contacto">Comments</H2>
+                </label>
+                <textarea class="form-control" name="coments" rows="3"
+                    placeholder="Please mention your interest in our artwork. "></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary mb-3">
+                <H3 class="H3_contacto">Submit</H3>
+            </button>
+        </form>
 
-    <!--JS para manejar el submit del formulario-->
-    <script>
-        //Va a buscar al html el elemento con la clase formulario
-        const $form = document.querySelector(".formulario")
-        console.log($form)
+        <!--JS para manejar el submit del formulario-->
+        <script>
+            //Va a buscar al html el elemento con la clase formulario
+            const $form = document.querySelector(".formulario")
+            console.log($form)
 
-        //Le agrega al formulario una escucha de eventos y cuando sucede el evento, llama a la funcion handleSubmit 
-        $form.addEventListener('submit', handleSubmit)
+            //Le agrega al formulario una escucha de eventos y cuando sucede el evento, llama a la funcion handleSubmit 
+            $form.addEventListener('submit', handleSubmit)
 
-        //define la funcion handleSubmit con ejecucion asincronica (una cosa a la vez y en paralelo)
-        async function handleSubmit(event) {
-            event.preventDefault() // Evita que el navegador haga la logica default 
-            const form = new FormData(this) //Vuelve a reconstruir el objeto FormData (clave/valor). This=formulario
-            const response = await fetch(this.action, {
-                method: this.method,
-                body: form,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }) // Aca busca la accion y el metodo del html definido en el form, como cuerpo define los datos del formulario y como header pone que la respuesta sea en formato json
-            if (response.ok) {
-                this.reset()
-                alert('Thanks for your interest in AlveArt gallery. We will contact you as soon as possible. Have a nice day!')
-            }// Si se envia el formulario sale la alerta y se limpia el formulario.
+            //define la funcion handleSubmit con ejecucion asincronica (una cosa a la vez y en paralelo)
+            async function handleSubmit(event) {
+                event.preventDefault() // Evita que el navegador haga la logica default 
+                const form = new FormData(this) //Vuelve a reconstruir el objeto FormData (clave/valor). This=formulario
+                const response = await fetch(this.action, {
+                    method: this.method,
+                    body: form,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }) // Aca busca la accion y el metodo del html definido en el form, como cuerpo define los datos del formulario y como header pone que la respuesta sea en formato json
+                if (response.ok) {
+                    this.reset()
+                    alert('Thanks for your interest in AlveArt gallery. We will contact you as soon as possible. Have a nice day!')
+                }// Si se envia el formulario sale la alerta y se limpia el formulario.
 
-        }
-    </script>
-
+            }
+        </script>
+    </div>
     <footer class="footer">
-        <a class="redsoc" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"
-                aria-hidden="true"></i></a>
-        <a class="redsoc" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"
-                aria-hidden="true"></i></a>
-        <a class="redsoc" href="https://ar.pinterest.com/" target="_blank"><i class="fa fa-pinterest"
-                aria-hidden="true"></i></a>
-        <a class="redsoc" href="https://www.instagram.com/?hl=es" target="_blank"><i class="fa fa-instagram"
-                aria-hidden="true"></i></a>
-        <a class="redsoc" href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"
-                aria-hidden="true"></i></a>
-        <p> © Copyright 2022 AlveArt. All rights reserved.</p>
+
+        <div class="contenido_footer">
+            <a class="redsoc" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"
+                    aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"
+                    aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://ar.pinterest.com/" target="_blank"><i class="fa fa-pinterest"
+                    aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.instagram.com/?hl=es" target="_blank"><i class="fa fa-instagram"
+                    aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin"
+                    aria-hidden="true"></i></a>
+
+            <p> © Copyright 2022 AlveArt. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
