@@ -8,7 +8,7 @@
     align-content: center;
     text-align: center;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 0.5fr);
+    grid-template-rows: repeat(12, 1fr);
     flex-wrap: wrap;
 }
 
@@ -32,22 +32,26 @@
     grid-template-rows: repeat(2, 1fr);
 }
 
-img{
-    object-fit: cover;
+
+.imagen_logo{
+    size-adjust: 100%;
     width:100%;
     height:100%;
   }
+
 .logo {
     display: grid;   
     grid-column: 1/3;
     grid-row: 1/3;
-   
+ 
 }
+
+
 
 /* TITULOS */
 
 .H1 {
-
+    align-self: flex-end;
     font-size: 1.3rem;
     color: #254e68;
     font-family: 'Libre Baskerville', serif;
@@ -62,7 +66,6 @@ img{
     font-family: 'Libre Baskerville', serif;
     grid-column: 3/13;
     grid-row: 2/3;
-
 }
 
 
@@ -89,24 +92,15 @@ img{
 
 }
 
-.Gallery_Browse {
+.Gallery_Browse,.Lastest_Works,.Contact{
 
     background-color: #f0f0ee;
     border: 1px black solid;
     border-radius: 5px;
+    font-size: 40px;
+     
 }
 
-.Specific_Picture {
-    background-color: #f0f0ee;
-    border: 1px black solid;
-    border-radius: 5px;
-}
-
-.Contact {
-    background-color: #f0f0ee;
-    border: 1px black solid;
-    border-radius: 5px;
-}
 
 /*PRINCIPAL */
 .principal {
@@ -132,7 +126,7 @@ img{
 }
 
 .principal_imagen {
-    background-image: url(/IMG/Imagen_principal_540x741.jpg);
+    background-image: url(IMG/Imagen_principal_540x741.jpg);
     margin: 0.5rem;
     border: 1px solid;
     grid-column: 1/7;
@@ -213,7 +207,6 @@ img{
     position: relative;
     height: 100%;
   }
-
   body {
     background: #eee;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
