@@ -107,6 +107,29 @@ h1, h2 {
     padding: 0.2rem;   
 }
 
+/*Formato links*/
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: bold;
+}
+
+.contactQoute{
+    background-color: whitesmoke;
+    color: blue;
+    border: 1.5px #aea688 solid;
+    border-radius: 5px;
+    font-size: 25px; 
+    padding: 0.5rem;   
+}
+
 /*PRINCIPAL */
 .principal {
     margin: 0rem 0.5rem;
