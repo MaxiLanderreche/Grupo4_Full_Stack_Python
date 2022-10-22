@@ -36,3 +36,20 @@ var swiper = new Swiper(".mySwiper", {
       },
     });
 
+
+
+function quoteMe(){
+
+  let cp = prompt("What's your post code?");
+  let API_URL = "https://apis.andreani.com/v1/tarifas?cpDestino="+ cp +"&contrato=300006611&cliente=CL0003750&sucursalOrigen=TRI&bultos[0][valorDeclarado]=1200&bultos[0][volumen]=200&bultos[0][kilos]=1.3&bultos[0][altoCm]=1&bultos[0][largoCm]=1.5&bultos[0][anchoCm]=2";
+  
+   fetch(API_URL)
+        .then((response) => response.json())
+        .then((json) => {
+                   console.log(json.tarifaConIva.total);
+                   //let costValue = json.tarifaConIva.total;
+                   //console.log(costValue);
+                   alert ("Your shiping cost is $"+ json.tarifaConIva.total);
+              });
+
+}
