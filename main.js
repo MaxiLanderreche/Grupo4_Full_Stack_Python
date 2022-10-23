@@ -10,13 +10,13 @@ document.getElementById("header").innerHTML = `
 `
 
 //Footer//
-document.getElementById("footer").innerHTML = `
+document.getElementById("footer").innerHTML = `<div>
   <a class="redsoc" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
   <a class="redsoc" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
   <a class="redsoc" href="https://ar.pinterest.com/" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
   <a class="redsoc" href="https://www.instagram.com/?hl=es" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
   <a class="redsoc" href="https://www.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-  <p> © Copyright 2022 AlveArt. All rights reserved.</p>
+  <p> © Copyright 2022 AlveArt. All rights reserved.</p></div>
   `
 
 //carousel//
