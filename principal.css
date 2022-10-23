@@ -12,6 +12,7 @@
     text-align: center;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 200px 100px repeat(6, 1fr);
+    color: black
 }
 
 header,footer {
@@ -83,7 +84,8 @@ h1, h2 {
     border: 1.5px #aea688 solid;
     border-radius: 5px;
     font-size: 25px; 
-    padding: 0.2rem;   
+    padding: 0.2rem; 
+    font-family: serif;  
 }
 
 /*Formato links*/
@@ -127,11 +129,11 @@ a:active {
 
 .principal_descripción {
     margin: 0.5rem;
-    /* border: 1px solid; */
     width: 50%;
     height: auto;
     font-size: 1.5rem;
 }
+
 .principal_imagen {
     object-fit: contain;
     margin: 0.5rem;
