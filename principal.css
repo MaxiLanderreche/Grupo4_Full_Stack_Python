@@ -81,13 +81,83 @@ a, h1, h2 {
 }
 
 .Gallery_Browse,.Lastest_Works,.Contact{
-    background-color: #cdcdca;
+    background-color: #efefef;
     border: 1.5px #aea688 solid;
     border-radius: 5px;
     font-size: 25px; 
     padding: 0.2rem; 
     font-family: serif;  
 }
+
+#menu, #menu-check {
+    display: none;
+}
+
+/* MENU HAMBURGUESA */
+
+@media only screen and (max-width: 640px) {
+
+    .navegador_items {
+        display: flex;
+        place-content: space-between;
+
+    }
+
+    #menu-check:not(:checked) ~ nav {
+        display: none;
+    }
+    #menu-check:checked ~ nav {
+        display: block;
+    }
+    #menu {
+        display: block;
+        color: var(--color-1);
+        background-color: var(--bgcolor-1);
+        font-size: 1.2em;
+        font-weight: bold;
+        border: 3px solid var(--color-1);
+        border-radius: 0.3em;
+        right: 0.5em;
+        top: 0.5em;
+        z-index: 9999;
+    }
+
+    #menu:hoover {
+       color:var(--text-color-3);
+       background: var(--color-1);
+
+    }
+
+    #menu-cerrar {
+        display: none;
+        
+     }
+
+    #menu-check:checked ~ label #menu-abrir {
+        display: none;
+    }
+    #menu-check:checked ~ label #menu-cerrar {
+        display: block;
+    }
+
+    header nav.navegador{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: var(--bgcolor-2);
+        padding-top: 0.5em;
+        padding-right: 1.5em;
+        opacity: 0.8;
+        color: var(--text-color-3); 
+    }
+
+    .body{ 
+    display: inline-block;
+    width: 95%;
+    }
+}
+
 
 /*Formato links*/
 a:link {
@@ -126,6 +196,7 @@ a:active {
     align-items: center;
     justify-content: center;
     flex-direction:row-reverse;
+    background-color: #efefef;
 }    
 
 .principal_descripción {
@@ -133,11 +204,11 @@ a:active {
     width: 50%;
     height: auto;
     font-size: 1.5rem;
+    background-color: #efefef;
 }
 
 .principal_imagen {
     object-fit: contain;
-    margin: 0.5rem;
     border: 1px solid;
     width: 50%;
     height: auto;
