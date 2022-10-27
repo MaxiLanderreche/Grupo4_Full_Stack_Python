@@ -52,7 +52,7 @@
             return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
         }
     }
-    return false;//
+    return false; 
   };
   var name = getUrlParameter('name');
   console.log(name);
@@ -82,11 +82,15 @@
                     <H2 class="H2_contacto">Subject or Artwork id</H2>
                 </label>
                 
-                <input id="preFill" type="text" class="form-control" name = "subject" placeholder = "subject" value="name" required>
+                <input id="preFill" type="text" class="form-control" name = "subject" placeholder = "Subject" value="name" required>
               <script>
 
                     document.querySelector('#preFill').value = name;
-                    console.log(preFill.value)
+                    if(name == 'false') {
+                        document.querySelector('#preFill').value = "";
+                        //console.log("false");
+                       }
+                    
               </script>   
             
             </div>
