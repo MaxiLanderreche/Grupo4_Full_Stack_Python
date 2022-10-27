@@ -82,10 +82,11 @@
                     <H2 class="H2_contacto">Subject or Artwork id</H2>
                 </label>
                 
-                <input id="preFill" type="text" class="form-control" name = "subject" placeholder = "subject" required>
-              <script> 
-                    document.querySelector('#preFill').placeholder = name;
-                    console.log(preFill.placeholder)
+                <input id="preFill" type="text" class="form-control" name = "subject" placeholder = "subject" value="name" required>
+              <script>
+
+                    document.querySelector('#preFill').value = name;
+                    console.log(preFill.value)
               </script>   
             
             </div>
