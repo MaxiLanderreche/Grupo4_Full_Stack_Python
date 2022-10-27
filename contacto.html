@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <!--Favicon-->
-    <link rel="shortcut icon" href="Favicon/AlveArt-Alpha.ico" type="image/x-icon">
     <!--Bootstrap links CDN-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -37,6 +35,32 @@
         </div>
     </nav>
 
+
+<script>
+        //const queryString = window.location.search; 
+        //console.log(queryString);    
+    var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;//
+  };
+  var name = getUrlParameter('name');
+  console.log(name);
+  //document.body.innerHTML = document.body.innerHTML.replace('subject', 'hi');
+
+
+</script>
+
     <!--Boostrap formulario-->
         <div class="principal_formulario">
         <form class="formulario" action="https://formspree.io/f/mrgdklpe" method="POST">
@@ -51,14 +75,23 @@
                 <label for="exampleFormControlInput1" class="form-label">
                     <H2 class="H2_contacto">Email address</H2>
                 </label>
-                <input type="email" class="form-control" name="email" placeholder="name@example.com" required>
+                <input type="email" class="form-control" name="email" placeholder="name@example.com">
             </div>
             <div class="mb-3 form">
                 <label for="exampleFormControlInput1" class="form-label">
                     <H2 class="H2_contacto">Subject or Artwork id</H2>
                 </label>
-                <input type="text" class="form-control" name="subject" required>
+                
+                <input id="preFill" type="text" class="form-control" name = "subject" placeholder = "subject" required>
+              <script> 
+                    document.querySelector('#preFill').placeholder = name;
+                    console.log(preFill.placeholder)
+              </script>   
+            
             </div>
+
+
+
             <div class="mb-3 form">
                 <label for="exampleFormControlTextarea1" class="form-label">
                     <H2 class="H2_contacto">Comments</H2>
@@ -82,6 +115,8 @@
 
         <!--JS para manejar el submit del formulario-->
         <script>
+
+
             //Va a buscar al html el elemento con la clase formulario
             const $form = document.querySelector(".formulario")
             console.log($form)
@@ -106,6 +141,9 @@
                 }// Si se envia el formulario sale la alerta y se limpia el formulario.
 
             }
+            
+ 
+
         </script>
 
     <div class="location"> 
