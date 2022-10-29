@@ -35,7 +35,23 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
       },
     });
+//carousel_latestworks//
 
+var swiper = new Swiper(".mySwiperlatestworks", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  slidesPerGroup: 1,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 
 function quoteMe(){
