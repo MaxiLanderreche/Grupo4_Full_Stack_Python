@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlveArt</title>
     <!--Favicon-->
-    <link rel="shortcut icon" href="Favicon/AlveArt-Alpha.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/Favicon/AlveArt-Alpha.ico" type="image/x-icon">
     <!--en href reemplazamos por nuestro archivo-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,35 +15,103 @@
     <link rel="stylesheet" href="principal.css">
     <!--Iconos footer-->
     <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
 </head>
 
 <body class="body">
 
-   <header id="header">
+    <header id="header">
     </header>
-    <!-- Introducir cambios -->
+
     <nav class="navegador">
-
-        <input type="checkbox" id="menu-check">
-        <label id="menu" for="menu-check">
-            <span id="menu-abrir">&#9776;</span>
-            <span id="menu-cerrar">X</span>
-        </label>
-
-        <nav class="navegador_items">
+        <div class="navegador_items">
             <div class="Gallery_Browse"><a href="carousel.html">Gallery Browse</a></div>
             <div class="Lastest_Works"><a href="latestworks.html">Lastest Works</a></div>
             <div class="Contact"><a href="contacto.html">Contact</a></div>
-        </nav>
-
-
+        </div>
     </nav>
-    
+
+
+    <div class="principal">
+
+        <!-- Swiper -->
+        <div class="swiper mySwiperlatestworks">
+            <div>
+                <h3>Latest Works</h3>
+            </div>
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide"><img src="IMG/3_1.jpg" alt="Latest_works_1">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">Mount Fuji</div>
+                        <p class="image__description">Hiroaki Takahashi</p>
+                        <div class="contactQoute"><a href="contacto.html?name=Mount Fuji">Quote me!</a></div>
+                    </div>
+                </div>
+
+
+                <div class="swiper-slide"><img src="IMG/3_2.jpg" alt="Latest_works_1">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">Man supporting a supine woman</div>
+                        <p class="image__description">William Blake</p>
+                        <div class="contactQoute"><a href="contacto.html?name=Man supporting a supine woman">Quote me!</a></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide"><img src="IMG/3_3.jpg" alt="Latest_works_1">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">The Sleeping Gypsy</div>
+                        <p class="image__description">Henri Rousseau</p>
+                        <div class="contactQoute"><a href="contacto.html?name=The Sleeping Gypsy">Quote me!</a></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide"><img src="IMG/3_4.jpg" alt="Latest_works_1">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">The Church at Auvers</div>
+                        <p class="image__description">Vincent van Gogh</p>
+                        <div class="contactQoute"><a href="contacto.html?name=The Church at Auvers">Quote me!</a></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide"><img src="IMG/3_5.jpg" alt="Latest_works_1">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">Gespenst eines Genies</div>
+                        <p class="image__description">Paul Klee</p>
+                        <div class="contactQoute"><a href="contacto.html?name=Gespenst eines Genies">Quote me!</a></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide"><img src="IMG/3_6.jpg" alt="Latest_works_1">
+                    <div class="image__overlay image__overlay--primary">
+                        <div class="image__title">Le Grand Canal</div>
+                        <p class="image__description">Claude Monet</p>
+                        <div class="contactQoute"><a href="contacto.html?name=Le Grand Canal">Quote me!</a></div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+    </div>
 
     <footer id="footer">
     </footer>
     <script src="main.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="main.js"> </script>
+
 </body>
 
 </html>
