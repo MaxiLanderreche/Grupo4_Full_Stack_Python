@@ -57,9 +57,14 @@ footer {
 a, h1, h2 {
     color: #254e68;
     font-family: 'Libre Baskerville', serif;
-    margin-bottom: 0rem;
+    margin-bottom: 0rem;  
 }
-
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
 /* NAVEGADOR */
 .navegador {
     display: grid;
