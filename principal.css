@@ -85,7 +85,7 @@ h2 {
     border-radius: 5px;
 }
 
-.Gallery_Browse,.Lastest_Works,.Contact{
+.Home, .Gallery_Browse,.Lastest_Works,.Contact, .Art_workshops{
     background-color: #efefef;
     border: 1.5px #aea688 solid;
     border-radius: 5px;
@@ -219,6 +219,22 @@ a:active {
     height: auto;
     background-repeat: no-repeat;
     background-size:cover;
+}
+
+
+/* STREET ART */
+h4 {
+    color: #254e68;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 0rem; 
+}
+.lista {
+    margin: 0rem 1.5rem;
+    text-align: left;
+    font-size: 1rem;
+}
+#street_art_carrousel{
+    justify-content: left;
 }
 
 /* CONTACTO Y UBICACION*/
