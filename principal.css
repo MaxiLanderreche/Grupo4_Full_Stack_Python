@@ -373,26 +373,28 @@ h4 {
   padding: 16px;
   margin-top: -22px;
   color: black;
+  background-color: lightgray;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  /*border-radius: 5 px 5 px;*/
+  border-radius: 7px 7px;
   user-select: none;
 }
 .prev {
   top: 50%;
-  left: 1%;
+  left: 0;
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  /*border-radius: 3px 0 0 3px;*/
 }
 
 /* On hover, add a grey background color */
 .prev:hover, .next:hover {
-  background-color: #f1f1f1;
+  background-color: #bacbd6;
   color: black;
 }
 
