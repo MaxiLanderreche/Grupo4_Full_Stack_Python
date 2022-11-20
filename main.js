@@ -20,71 +20,30 @@ document.getElementById("footer").innerHTML = `<div>
   `
 
 //carousel//
-var swiper = new Swiper(".mySwiper", {
-   // Default parameters
-  slidesPerView: 1,
-  slidesPerGroup: 1,
-  spaceBetween: 10,
-       
-       loop: true,
-       loopFillGroupWithBlank: true,
-       pagination: {
-         el: ".swiper-pagination",
-         clickable: true,
-        },
-       navigation: {
-         nextEl: ".swiper-button-next",
-         prevEl: ".swiper-button-prev",
-       },
-    
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          slidesPerGroup: 1,
-          spaceBetween:  10,
-        },
-       
-        640: {
-          slidesPerView: 1,
-          slidesPerGroup: 1,
-          spaceBetween:  10,
-        },
-        800: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween:  20,
-        },
-        1200: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
-          spaceBetween:  20,
-        },
-      }
+let slideIndex = [1,1];
+let slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
 
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
 
-     });
-
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
 
 //carousel_latestworks//
 
-var swiper = new Swiper(".mySwiperlatestworks", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  slidesPerGroup: 1,
-  autoplay: {
-        delay: 3000,
-        },
-  loop: true,
-  loopFillGroupWithBlank: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+
+
 
 
 function quoteMe(){
