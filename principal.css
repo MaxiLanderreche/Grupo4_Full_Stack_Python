@@ -327,11 +327,21 @@ h4 {
   } 
 
 /*CAROUSEL*/
+#principal_carrousel {
+    justify-content: center;
+}
 
-* {box-sizing: border-box}
-.mySlides1, .mySlides2 {display: none}
-img {vertical-align: middle;}
+.mySlides1, .mySlides2 {display: none;
+}
 
+.img_carrousel {
+    vertical-align: middle
+    object-fit: contain;
+ }
+
+ #h4_carrousel {
+    font-size: 1.5em;
+}
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -354,6 +364,10 @@ img {vertical-align: middle;}
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
+.prev {
+  top: 50%;
+  left: 1%;
+}
 
 /* Position the "next button" to the right */
 .next {
@@ -366,8 +380,6 @@ img {vertical-align: middle;}
   background-color: #f1f1f1;
   color: black;
 }
-
-
 
 /*  Hover image */
 
