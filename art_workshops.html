@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlveArt</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="Favicon/AlveArt-Alpha.ico" type="image/x-icon">
+    <!--en href reemplazamos por nuestro archivo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="principal.css">
+    <!--Iconos footer-->
+    <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="body">
+
+    <header id="header">
+    </header>
+
+    <nav class="navegador">
+
+        <input type="checkbox" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">&#9776;</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+
+        <nav class="navegador_items">
+            <div class="Home"><a href="index.html">Home</a></div>
+            <div class="Gallery_Browse"><a href="carousel.html">Gallery Browse</a></div>
+            <div class="Lastest_Works"><a href="latestworks.html">Lastest Works</a></div>
+            <div class="Art_workshops"><a href="art_workshops.html">Art workshops</a></div>
+            <div class="Contact"><a href="contacto.html">Contact</a></div>
+        </nav>
+    </nav>
+
+    <div class="principal">
+        <div class="contendor_principal">    
+            <div class="principal_descripción">
+                <h4 id="h4_urban">
+                    Urban art: graffiti and murals
+                </h4>
+                <br>
+                <p> 
+                    A global trend that finds its place in the streets of <b>Buenos Aires</b>. The city walls house one of the most active urban art movements in Latin America.
+                    Artists come from all over the world to turn gray walls into an open-air museum.
+                </p>
+                <br>
+                <b>Did you know? </b>
+                <br>
+                <p>    
+                Urban art in the city has been regulated since 2009 in the muralism law, a culture that developed in the streets from very early times, following political fluctuations. Interventions must have the approval of the property owner.
+                </p>    
+                <br>
+                <p>
+                    From <b>AlveArt</b> invite you to share more curiosities about urban art on a tour of the Palermo neighborhood.
+                </p>
+                <br>
+                <ul class= "lista"> <h5>Art street meeting</h5>
+                    <li>Schedule: Nov 25</li>
+                    <li>Start: 3pm</li>
+                    <li>Duration: 2 hours</li>
+                    <li>Meeting Point: Plaza Serrano (a.k.a. Plaza Cortazar) in Palermo.</li>
+                </ul>
+            </div>
+            
+            <div id= street_art_carrousel>
+                <!-- Boton para ir para atras -->
+                <button onclick="prev()">prev</button>
+            
+                <!-- Aca va a estar la imagen, le ponemos el id "img" para identificarla en el JS-->
+                <img id="img" />
+                
+                <!-- Boton para ir para la proxima foto -->
+                <button onclick="next()">next</button>
+            </div>
+        </div>
+    </div>
+   
+    
+    <script>
+        // La lista de imagenes a recorrer por posición (reemplazar por las otras fotos)
+        let imgs = ["IMG carousel/4_1.jpeg", "IMG carousel/4_2.jpeg", "IMG carousel/4_3.jpeg", "IMG carousel/4_4.jpeg","IMG carousel/4_5.jpeg", "IMG carousel/4_6.jpeg", "IMG carousel/4_7.jpeg"]
+        // La posicion original
+        let pos = 0
+
+        // Cargamos la imagen en la posición original
+        document.getElementById("img").src = imgs[pos]
+
+        // función que va cambiando la posición y cargando la proxima foto, al llegar al maximo vuelve a cero.
+        function next() {
+            if(pos < imgs.length - 1 ) {
+                pos = pos + 1
+            } else {
+                pos = 0
+            }   
+            document.getElementById("img").src = imgs[pos]
+        }
+
+        // Función que va cambiando la posición y cargando la foto previa, si se llega a 0, va al final de la lista
+        function prev() {
+            if(pos > 0) {
+                pos = pos - 1
+            } else {
+                pos = imgs.length - 1
+            }
+            document.getElementById("img").src = imgs[pos]
+        }
+    </script>
+
+    <footer id="footer">
+    </footer>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
